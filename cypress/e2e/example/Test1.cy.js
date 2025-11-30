@@ -44,8 +44,5 @@ describe("my first testcase", () => {
       "have.text",
       "GREENKARTLimited offer - FREE Core Java & QA Resume courseThank you, your order has been placed successfully  You'll be redirected to Home page shortly!!"
     );
-
-
-    
   });
 });

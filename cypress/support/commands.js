@@ -24,9 +24,14 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+Cypress.Commands.add("login", (email, password) => {
+  cy.get("#username").type(email);
+  cy.get("#password").type(password);
+  cy.get("#submit-login").click();
+});
 
-Cypress.Commands.add('login', (email, password) => { 
-      cy.get("#username").type(email);
-      cy.get("#password").type(password);
-      cy.get("#submit-login").click();
- })
+Cypress.Commands.add("submitFormDetails", () => {
+  cy.get("#country").type("India");
+  cy.get("div[class='suggestions'] ul li a").click();
+  cy.get("input[value='Purchase']").click();
+});
